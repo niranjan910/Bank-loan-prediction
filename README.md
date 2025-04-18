@@ -1,20 +1,20 @@
-# Bank Loan Prediction
+# **Bank Loan Prediction**
 
-## Project Overview
+## 📌 Project Overview
 This project performs an in-depth data analysis on bank loan applications to uncover patterns and factors affecting loan approval rates. It explores demographic and financial variables to identify trends in approval rates, loan amounts, income levels, and applicant profiles.
 
-## Tools Used
+## 🛠️ Tools Used
 - Python
 - Jupyter Notebook
 - Pandas (data analysis)
 - Plotly/Seaborn (visualizations)
 
-## How to Use
+## 📖 How to Use
 1. Clone this repository
 2. Open `Bank Loan Prediction.ipynb` in Jupyter Notebook
 3. Run the notebook to view data analysis, visualizations, and insights
 
-## Key Findings
+## 📊 Key Findings
 - Gender Imbalance: 81.76% Male applicants, 18.24% Female
 - Marital Status: 65.31% married, 34.69% unmarried
 - Education: 78.18% Graduates, 21.82% Non-graduates
@@ -32,5 +32,5 @@ This project performs an in-depth data analysis on bank loan applications to unc
 - Higher loan amounts are often associated with rejection
 - Weak correlation between Loan Amount and Credit History
 
-## Data Source
+## 📂 Data Source
 Dataset included in this repository as `LoanData.csv`
