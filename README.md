@@ -3,7 +3,7 @@
 ## 📌 Project Overview
 This project performs an in-depth data analysis on bank loan applications to uncover patterns and factors affecting loan approval rates. It explores demographic and financial variables to identify trends in approval rates, loan amounts, income levels, and applicant profiles.
 
-## 🛠️ Tools Used
+## 🛠️ **Tools Used**
 - Python
 - Jupyter Notebook
 - Pandas (data analysis)
