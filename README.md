@@ -1,4 +1,8 @@
 # **Bank Loan Prediction**
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Pandas](https://img.shields.io/badge/Pandas-1.3%2B-orange)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.0%2B-yellowgreen)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-3.5%2B-blueviolet)
 
 ## 📌 Project Overview
 This project performs an in-depth data analysis on bank loan applications to uncover patterns and factors affecting loan approval rates. It explores demographic and financial variables to identify trends in approval rates, loan amounts, income levels, and applicant profiles.
