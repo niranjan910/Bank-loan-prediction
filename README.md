@@ -35,6 +35,3 @@ This project performs an in-depth data analysis on bank loan applications to unc
 - Graduates tend to have higher loan amounts and incomes than non-graduates
 - Higher loan amounts are often associated with rejection
 - Weak correlation between Loan Amount and Credit History
-
-## 📂 Data Source
-Dataset included in this repository as `LoanData.csv`
