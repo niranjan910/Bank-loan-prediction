@@ -1,37 +1,115 @@
-# **Bank Loan Prediction**
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![Pandas](https://img.shields.io/badge/Pandas-1.3%2B-orange)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.0%2B-yellowgreen)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-3.5%2B-blueviolet)
+# Bank Loan Prediction Analysis
 
-## 📌 Project Overview
-This project performs an in-depth data analysis on bank loan applications to uncover patterns and factors affecting loan approval rates. It explores demographic and financial variables to identify trends in approval rates, loan amounts, income levels, and applicant profiles.
+- Author: Niranjan  
+- Date: 16 May 2025
 
-## 🛠️ **Tools Used**
-- Python
-- Jupyter Notebook
-- Pandas (data analysis)
-- Plotly/Seaborn (visualizations)
+---
 
-## 📖 How to Use
-1. Clone this repository
-2. Open `Bank Loan Prediction.ipynb` in Jupyter Notebook
-3. Run the notebook to view data analysis, visualizations, and insights
+# Project Background
 
-## 📊 Key Findings
-- Gender Imbalance: 81.76% Male applicants, 18.24% Female
-- Marital Status: 65.31% married, 34.69% unmarried
-- Education: 78.18% Graduates, 21.82% Non-graduates
-- Employment Type: 86.64% Non Self-Employed, 13.36% Self-Employed
-- Property Area: Semiurban has the highest applicants
-- Loan Approval Rate: 68.7% approval overall
-- Loan Amount Distribution: Right-skewed; most applicants request amounts between 100-168k
-- Loan Term: 30 years (360 months) is most common
-- Higher Approval Rates:
-- For male, married, and graduate applicants
-- For salaried individuals compared to self-employed
-- In Semiurban areas
-- For applicants with good credit history
-- Graduates tend to have higher loan amounts and incomes than non-graduates
-- Higher loan amounts are often associated with rejection
-- Weak correlation between Loan Amount and Credit History
+This project analyzes bank loan applications to identify the key factors influencing loan approval decisions. By evaluating customer demographics, financial history, and property-related features, the goal is to develop data-driven insights that can improve risk assessment, customer targeting, and operational decision-making for financial institutions.
+
+Insights and recommendations are provided on the following key areas:
+
+* **Credit History Risk Impact**
+* **Income vs Loan Demand**
+* **Demographic Influence**
+* **Property Area Trends**
+* **Repayment Feasibility**
+
+The Python notebooks used to inspect, clean, and analyze the data can be found here `Bank_Loan_Analysis.ipynb`.  
+An executive presentation summarizing the results can be found here `Bank Loan Prediction Insights.pdf`.
+
+---
+
+# Data Structure & Initial Checks
+
+The primary data fields are as follows:
+
+* **Gender**: Male/Female applicant
+* **Married**: Marital status
+* **Dependents**: Number of dependents
+* **Education**: Graduate/Not Graduate
+* **Self_Employed**: Employment type
+* **Loan_Amount_Term**: Loan repayment term
+* **Credit_History**: Track record of past credit behavior
+* **Property_Area**: Urban/Semiurban/Rural
+* **Loan_Status**: Loan approved (Y/N)
+* **LoanAmount**: Requested loan amount
+* **overall_income**: Combined income of applicant and co-applicant
+
+---
+
+# Executive Summary
+
+### Overview of Findings
+
+The analysis reveals that applicants with a good credit history and stable income are significantly more likely to receive loan approval. Urban and semiurban applicants tend to have higher approval rates compared to rural areas. Higher loan amounts slightly increase rejection probability, especially when credit history is poor. Income levels and property location together influence approval rates, highlighting the importance of combining financial and demographic profiling.
+
+---
+
+# Insights Deep Dive
+
+### Credit History Risk Impact:
+
+* Applicants with **Credit_History = 1.0** have **high approval rates** (~80%+), regardless of demographics.
+* When **Credit_History = 0.0**, approval drops drastically.
+* Semiurban areas with good credit profiles show the highest approval rates.
+  ![Credit History vs Approval](images/Credit_History_vs_Approval_by_Area.png)
+
+### Income vs Loan Demand:
+
+* When **LoanAmount** is high, applicants with **Very High or High Income** still get approved.
+* But **low-income applicants requesting large loans** are mostly rejected.
+* Suggests income-to-loan ratio plays a key role in approval decisions.
+  ![Income vs LoanAmount vs Status](images/Loan_Amount_vs_Income_vs_Approval.png)
+
+### Demographic Influence:
+
+* **Married male graduates** have higher approval rates.
+* **Unmarried females**, especially those self-employed, have lower chances.
+* **Education + Employment Status** combinations reveal lending tendencies based on social profiles.
+  ![Demographics vs Loan](images/Demographic_vs_Approval.png)
+
+### Property Area Trends:
+
+* **Semiurban applicants** consistently have the highest loan approval.
+* Urban and rural regions show mixed results, with **rural + no credit history** facing heavy rejection.
+* Bank’s comfort level seems higher in semiurban zones.
+  ![Area vs Approval](images/Area_vs_Approval.png)
+
+### Repayment Feasibility:
+
+* Longer **Loan_Amount_Term** combined with **larger loan amounts** increases rejections.
+* Applicants requesting shorter terms tend to be approved, possibly indicating better repayment capacity.
+  ![Term and Loan vs Status](images/Loan_Term_and_Amount_vs_Approval.png)
+
+---
+
+# Recommendations
+
+Based on the analysis above, the following actions are recommended:
+
+* Prioritize applicants with **strong credit history** and **moderate-to-high income** levels.
+* Create **custom approval scoring models** that combine credit score, income, and property area.
+* Offer **financial literacy** or **credit counseling** programs for rural applicants with poor credit records.
+* Use **loan amount-to-income ratios** as part of eligibility screening.
+* Consider loan term optimization to reduce rejection rates due to affordability concerns.
+
+---
+
+# Assumptions and Caveats
+
+* Missing values were imputed using mean/mode strategies depending on the column type.
+* LoanAmount was grouped using logical bins to better analyze affordability.
+* Credit_History values were assumed accurate as they are key predictors.
+* The analysis assumes consistent policy across branches; geographic bias may exist.
+
+---
+
+## 📬 Contact
+
+For queries or collaborations:
+
+* **Email**: [niranjan991100@gmail.com](mailto:niranjan991100@gmail.com)  
+* **LinkedIn**: [https://www.linkedin.com/in/niranjan-k-a83517229/](https://www.linkedin.com/in/niranjan-k-a83517229/)
