@@ -1,4 +1,3 @@
-
 # Bank Loan Prediction Analysis
 
 - Author: Niranjan  
