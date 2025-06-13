@@ -18,7 +18,7 @@ Insights and recommendations are provided on the following key areas:
 * **Repayment Feasibility**
 
 The Python notebooks used to inspect, clean, and analyze the data can be found here `Bank_Loan_Analysis.ipynb`.  
-An executive presentation summarizing the results can be found here `Bank Loan Prediction Insights.pdf`.
+An executive presentation on Power BI can be found here `Bank Loan Prediction Insights.pdf`.
 
 ---
 
